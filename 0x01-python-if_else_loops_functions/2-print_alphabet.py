@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-import sys
-
-for i in range(97, 123):
-    sys.stdout.write(chr(i))
+import string
+print(string.ascii_lowercase)
