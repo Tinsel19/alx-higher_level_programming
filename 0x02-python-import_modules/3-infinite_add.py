@@ -1,8 +1,18 @@
-i#!/usr/bin/python3
-import sys
+#!/usr/bin/python3
+def sum_arg(argv):
+    n = len(argv) - 1
+    if n == 0:
+        print("{:d}".format(n))
+        return
+    else:
+        i = 1
+        add = 0
+        while i <= n:
+            add += int(argv[i])
+            i += 1
+        print("{:d}".format(add))
+
+
 if __name__ == "__main__":
-    """Print the addition of all arguments"""
-    total = 0
-    for i in range(len(sys.argv) - 1):
-        total += int(sys.argv[i + 1])
-    print("{}".format(total))
+    import sys
+    sum_arg(sys.argv)
